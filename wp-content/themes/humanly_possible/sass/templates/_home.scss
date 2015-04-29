@@ -1,0 +1,6 @@
+.hero {
+    padding: 16em 0;
+    text-align: center;
+    color: white;
+    @include background-image(scroll);
+}

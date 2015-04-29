@@ -1,0 +1,38 @@
+#masthead {
+ background: $gold;   
+}
+
+#site-logo {
+ float: left;
+    width: 150px;
+    padding: .5em .5em;
+}
+
+//nagivation//
+#site-navigation {
+    float: right;
+    
+    .menu-item {
+        display:inline-block;
+        margin-left: 1em;
+    
+        a {
+            color: white;
+            font-family: $open-sans;
+            font-weight: 300;
+            font-size: 1.25em;
+            text-decoration: none;
+            
+            
+            &.hover {
+                color: darken(#fff000, 20%);
+            }
+            
+        }
+    }
+}
+
+//mobile menu
+.menu-toggle {
+    display: none;
+}

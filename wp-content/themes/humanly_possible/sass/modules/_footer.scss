@@ -1,0 +1,26 @@
+#colophon {
+    background: $black;
+}
+
+.menu {
+    text-align: right;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-logo {
+    width: 200px;
+    padding: .5em 0;
+}
+
+.site-info {
+    color: white;
+    text-align: center;
+}

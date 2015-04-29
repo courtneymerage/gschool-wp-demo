@@ -51,6 +51,8 @@ function humanly_possible_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'humanly_possible' ),
+        'footer' => __( 'Footer Menu', 'humanly_possible' ),  // Footer menu
+    'social' => __( 'Social Menu', 'humanly_possible' ),   // If you want to use a social menu
 	) );
 
 	/*
@@ -101,6 +103,19 @@ add_action( 'widgets_init', 'humanly_possible_widgets_init' );
  */
 function humanly_possible_scripts() {
 	wp_enqueue_style( 'humanly_possible-style', get_stylesheet_uri() );
+    
+    //fonts//
+    wp_enqueue_style( 'humanly_possible-roboto', '//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
+    
+    wp_enqueue_style( 'humanly_possible-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+    
+    wp_enqueue_style( 'humanly_possible-raleway', '//fonts.googleapis.com/css?family=Raleway:700,100,900,400');
+
+    wp_enqueue_style( 'humanly_possible-abril-fatface', '//fonts.googleapis.com/css?family=Abril+Fatface');
+    
+    wp_enqueue_style( 'humanly_possible-righteous', '//fonts.googleapis.com/css?family=Righteous');
+
+    
 
 	wp_enqueue_script( 'humanly_possible-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
