@@ -490,4 +490,9 @@ a {
     text-transform: uppercase;
     text-decoration: none; }
 
+body.post-type-archive-library #main .row column, body.post-type-archive-library #main .posts-navigation .nav-links column, .posts-navigation body.post-type-archive-library #main .nav-links column {
+  margin-bottom: 1em; }
+  body.post-type-archive-library #main .row column:nth-child(3n), body.post-type-archive-library #main .posts-navigation .nav-links column:nth-child(3n), .posts-navigation body.post-type-archive-library #main .nav-links column:nth-child(3n) {
+    margin-right: 0; }
+
 /*# sourceMappingURL=style.css.map */

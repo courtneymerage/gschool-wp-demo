@@ -1,0 +1,10 @@
+body.post-type-archive-library {
+    #main .row {
+        column {
+            margin-bottom: 1em;
+            
+            // Every third column has no left margin
+			&:nth-child(3n) { margin-right: 0; }
+        }
+    }
+}
