@@ -2,5 +2,181 @@
     padding: 16em 0;
     text-align: center;
     color: white;
-    @include background-image(scroll);
+    @include background-image;
+    
+    h1 {
+        font-family: $raleway;
+    }
+    
+    p {
+        font-family: $raleway;
+		font-size: 1.5em;
+		margin-top: 0.5em;
+	}
+}
+
+
+// Services Section
+.services {
+    background: $tan;
+    padding: 4em 0;
+    
+    .column {
+        text-align: center;
+    }
+    
+    .service-icon {
+        height: 8em;
+        width: auto;
+        margin-bottom: 2.25em;
+    }
+    
+    .service-title {
+        position: relative;
+        margin-bottom: 1em;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            
+        }
+    }   
+    
+    .service-description {
+        text-align: left;
+        color: $black;
+    }
+}
+
+// Library Section
+.library {
+    text-align: center;
+    padding: 6em 0;
+    
+    .library-headline {
+        margin-bottom: 1.75em;
+    }
+    
+    .column {
+        position: relative;
+        text-align: center;
+        padding: 7em 0;
+        @include background-image(scroll);
+        
+        //when a user hovers over the feature image
+        &:hover {
+                .library-color-overlay,
+                .library-title, 
+                .library-link {
+                    opacity: 1;
+                }
+        }
+    }
+    
+    .library-color-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba($gray, 0.75);
+        z-index: 0;
+        opacity: 0;
+        @include ease;
+    }
+    
+    .library-title,
+    .library-link {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        opacity: 0;
+        @include ease;
+    }
+    
+    .library-title {
+		//font-weight: 400;
+		margin-bottom: 1em;
+        color: $gold;
+        font-family: $raleway;
+        text-shadow: 0 0 4px lighten($black, 15%);
+	}
+
+	.library-link {
+		display: inline-block;
+		text-decoration: none;
+		border: 2px solid white;
+		border-radius: 0;
+		height: 3em;
+		width: 3em;
+
+		span {
+			font-size: 2em;
+			margin-top: 0.15em;
+			margin-left: -0.2em;
+		}
+	}
+        
+    h2 {
+        font-family: $raleway;
+    }
+    
+    .view-more {
+        display: block;
+		margin-top: 5em;
+        text-decoration: none;
+        font-family: $raleway;
+        color: $gold;
+    }
+}
+
+
+// Blog Section
+.recent-blog {
+	background: $white;
+	padding: 6em 0 7em;
+	text-align: center;
+
+	.blog-headline {
+		margin-bottom: 2em;
+	}
+
+	.blog-post {
+		width: 80%;
+		margin: 0 auto 1.5em;
+		background: white;
+		padding: 3.25em 3em 2.5em;
+		text-align: left;
+		box-shadow: 0 1px 6px lighten($gray, 15%);
+	}
+
+	.blog-title {
+		border-bottom: 2px solid $gold;
+		padding-bottom: 0.4em;
+		margin-bottom: 0.5em;
+	}
+
+	.meta {
+		margin-bottom: 1.25em;
+		color: $gray;
+		font-size: 1.1em;
+		font-family: $raleway;
+		font-weight: 400;
+
+		a { color: $gray; }
+	}
+
+	p {
+		color: $gray;
+	}
+
+	.blog-link {
+		display: block;
+		margin-top: 3em;
+		color: $gold;
+		font-weight: 700;
+		text-align: right;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
 }

@@ -5,10 +5,58 @@ $gold: #d5a021;
 $tan: #e2c290;
 $gray: #e2e2e2;
 
-//Fonts
 
+//Fonts
 $roboto: 'Roboto Slab', serif;
 $open-sans: 'Open Sans', sans-serif;
 $righteous: 'Righeous', cursive;
 $abril-fatface: 'Abril Fatface', cursive;
 $raleway: 'Raleway', sans-serif;   
+
+
+// Services Section
+.services {
+    background: $tan;
+    padding: 4em 0;
+    
+    .column {
+        text-align: center;
+    }
+    
+    .service-icon {
+        height: 8em;
+        width: auto;
+        margin-bottom: 2.25em;
+    }
+    
+    .service-title {
+        position: relative;
+        margin-bottom: 1em;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            
+        }
+    }   
+    
+    .service-description {
+        text-align: left;
+        color: $black;
+    }
+}
+
+// Library Section
+.library {
+    text-align: center;
+    padding: 6em 0;
+    
+    .library-headline {
+        margin-bottom: 1.75em;
+    }
+}
+
+    
+
+
+    

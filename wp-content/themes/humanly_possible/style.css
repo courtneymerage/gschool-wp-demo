@@ -198,14 +198,39 @@ td,
 th {
   padding: 0; }
 
-.row {
-  width: 85%;
-  max-width: 1100px;
+.services {
+  background: #e2c290;
+  padding: 4em 0; }
+  .services .column {
+    text-align: center; }
+  .services .service-icon {
+    height: 8em;
+    width: auto;
+    margin-bottom: 2.25em; }
+  .services .service-title {
+    position: relative;
+    margin-bottom: 1em; }
+    .services .service-title:after {
+      content: '';
+      position: absolute; }
+  .services .service-description {
+    text-align: left;
+    color: #2f2f2f; }
+
+.library {
+  text-align: center;
+  padding: 6em 0; }
+  .library .library-headline {
+    margin-bottom: 1.75em; }
+
+.row, .posts-navigation .nav-links {
+  width: 95%;
+  max-width: 1400px;
   margin: 0 auto;
   *zoom: 1; }
-  .row:after {
+  .row:after, .posts-navigation .nav-links:after {
     clear: both; }
-  .row:after, .row:before {
+  .row:after, .posts-navigation .nav-links:after, .row:before, .posts-navigation .nav-links:before {
     content: '';
     display: table; }
 
@@ -264,7 +289,8 @@ a {
           transition: all 333ms ease-in-out; }
 
 #masthead {
-  background: #d5a021; }
+  background: #d5a021;
+  padding: .5em 0; }
 
 #site-logo {
   float: left;
@@ -273,17 +299,19 @@ a {
 
 #site-navigation {
   float: right; }
+  #site-navigation .menu {
+    margin: 0.4em 0 0; }
   #site-navigation .menu-item {
     display: inline-block;
     margin-left: 1em; }
     #site-navigation .menu-item a {
-      color: white;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 300;
-      font-size: 1.25em;
+      color: #e2e2e2;
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      font-size: 1.15em;
       text-decoration: none; }
       #site-navigation .menu-item a.hover {
-        color: #999000; }
+        color: #afafaf; }
 
 .menu-toggle {
   display: none; }
@@ -292,22 +320,40 @@ a {
   background: #2f2f2f; }
 
 .menu {
-  text-align: right; }
-
-li {
-  display: inline-block; }
-
-a {
-  text-decoration: none;
-  color: white; }
+  text-align: right;
+  margin-top: 0; }
+  .menu li {
+    display: inline-block;
+    margin-left: 0.5em; }
+    .menu li a {
+      text-decoration: none;
+      color: white;
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      font-size: 0.95em; }
+  .menu#menu-social-nagivation li a {
+    color: #e2e2e2; }
+  .menu .site-info {
+    text-align: center;
+    color: #e2e2e2;
+    font-size: 0.75em; }
 
 #footer-logo {
   width: 200px;
   padding: .5em 0; }
 
-.site-info {
-  color: white;
-  text-align: center; }
+.posts-navigation .nav-links {
+  margin-top: 3em; }
+.posts-navigation .nav-previous a,
+.posts-navigation .nav-next a {
+  color: #d5a021;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif; }
+.posts-navigation .nav-previous {
+  float: left; }
+.posts-navigation .nav-next {
+  float: right; }
 
 .hero {
   padding: 16em 0;
@@ -316,8 +362,132 @@ a {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-attachment: scroll !important; }
+  background-attachment: fixed !important; }
   html.touch .hero {
     background-attachment: scroll !important; }
+  .hero h1 {
+    font-family: "Raleway", sans-serif; }
+  .hero p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em;
+    margin-top: 0.5em; }
+
+.services {
+  background: #e2c290;
+  padding: 4em 0; }
+  .services .column {
+    text-align: center; }
+  .services .service-icon {
+    height: 8em;
+    width: auto;
+    margin-bottom: 2.25em; }
+  .services .service-title {
+    position: relative;
+    margin-bottom: 1em; }
+    .services .service-title:after {
+      content: '';
+      position: absolute; }
+  .services .service-description {
+    text-align: left;
+    color: #2f2f2f; }
+
+.library {
+  text-align: center;
+  padding: 6em 0; }
+  .library .library-headline {
+    margin-bottom: 1.75em; }
+  .library .column {
+    position: relative;
+    text-align: center;
+    padding: 7em 0;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important; }
+    html.touch .library .column {
+      background-attachment: scroll !important; }
+    .library .column:hover .library-color-overlay,
+    .library .column:hover .library-title,
+    .library .column:hover .library-link {
+      opacity: 1; }
+  .library .library-color-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(226, 226, 226, 0.75);
+    z-index: 0;
+    opacity: 0;
+    -webkit-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out; }
+  .library .library-title,
+  .library .library-link {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out; }
+  .library .library-title {
+    margin-bottom: 1em;
+    color: #d5a021;
+    font-family: "Raleway", sans-serif;
+    text-shadow: 0 0 4px #555555; }
+  .library .library-link {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 0;
+    height: 3em;
+    width: 3em; }
+    .library .library-link span {
+      font-size: 2em;
+      margin-top: 0.15em;
+      margin-left: -0.2em; }
+  .library h2 {
+    font-family: "Raleway", sans-serif; }
+  .library .view-more {
+    display: block;
+    margin-top: 5em;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: #d5a021; }
+
+.recent-blog {
+  background: #fff;
+  padding: 6em 0 7em;
+  text-align: center; }
+  .recent-blog .blog-headline {
+    margin-bottom: 2em; }
+  .recent-blog .blog-post {
+    width: 80%;
+    margin: 0 auto 1.5em;
+    background: white;
+    padding: 3.25em 3em 2.5em;
+    text-align: left;
+    box-shadow: 0 1px 6px white; }
+  .recent-blog .blog-title {
+    border-bottom: 2px solid #d5a021;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.5em; }
+  .recent-blog .meta {
+    margin-bottom: 1.25em;
+    color: #e2e2e2;
+    font-size: 1.1em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400; }
+    .recent-blog .meta a {
+      color: #e2e2e2; }
+  .recent-blog p {
+    color: #e2e2e2; }
+  .recent-blog .blog-link {
+    display: block;
+    margin-top: 3em;
+    color: #d5a021;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

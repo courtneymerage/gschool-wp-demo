@@ -1,5 +1,6 @@
 #masthead {
- background: $gold;   
+ background: $gold;
+    padding: .5em 0;
 }
 
 #site-logo {
@@ -12,20 +13,24 @@
 #site-navigation {
     float: right;
     
+    .menu {
+        margin: 0.4em 0 0;
+    }
+    
     .menu-item {
         display:inline-block;
         margin-left: 1em;
     
         a {
-            color: white;
-            font-family: $open-sans;
-            font-weight: 300;
-            font-size: 1.25em;
+            color: $gray;
+            font-family: $raleway;
+            font-weight: 400;
+            font-size: 1.15em;
             text-decoration: none;
             
             
             &.hover {
-                color: darken(#fff000, 20%);
+                color: darken($gray, 20%);
             }
             
         }

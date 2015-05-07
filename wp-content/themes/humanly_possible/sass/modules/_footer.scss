@@ -4,23 +4,43 @@
 
 .menu {
     text-align: right;
-}
+    margin-top: 0;
 
-li {
-    display: inline-block;
-}
 
-a {
-    text-decoration: none;
-    color: white;
+    li {
+        display: inline-block;
+        margin-left: 0.5em;
+    
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $raleway;
+            font-weight: 400;
+            font-size: 0.95em;
+            }
+    }
+
+    //social menu specific styles
+    &#menu-social-nagivation {
+        li {
+            a {color: $gray;
+            }
+        }
+    }
+
+
+
+//copyright
+.site-info {
+    text-align: center;
+    color: $gray;
+    font-size: 0.75em;
+}
 }
 
 #footer-logo {
     width: 200px;
     padding: .5em 0;
 }
-
-.site-info {
-    color: white;
-    text-align: center;
-}
+    

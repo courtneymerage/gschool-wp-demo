@@ -1,0 +1,27 @@
+.posts-navigation {
+
+.nav-links {
+    margin-top: 3em;
+    @extend .row;
+    }
+
+.nav-previous,
+.nav-next {
+    a {
+        color: $gold;
+        font-weight: 700;
+        text-decoration: none;
+        font-family: $raleway;
+    }
+}
+
+.nav-previous {
+    float: left;
+}
+    
+    
+.nav-next {
+    float: right;
+}  
+
+}
