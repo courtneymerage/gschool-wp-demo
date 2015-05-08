@@ -1,25 +1,42 @@
 .hero {
-    padding: 16em 0;
+    padding: 20em 0;
     text-align: center;
     color: white;
     @include background-image;
     
     h1 {
         font-family: $raleway;
+        font-size: 4em;
+        text-shadow: 0 0 6px lighten($black, 15%);
     }
     
     p {
         font-family: $raleway;
 		font-size: 1.5em;
 		margin-top: 0.5em;
+        text-shadow: 0 0 6px lighten($black, 15%);
+
 	}
 }
 
 
+//gold band
+.gold-band {
+    background: $gold;
+    height: 1em;
+    width: auto;
+}
+
 // Services Section
 .services {
-    background: $tan;
+    background: $gray;
     padding: 4em 0;
+    
+    .services-headline {
+        font-family: $raleway;
+        margin-bottom: 2.25em;
+        text-align: center;
+    }
     
     .column {
         text-align: center;
@@ -34,6 +51,8 @@
     .service-title {
         position: relative;
         margin-bottom: 1em;
+        font-family: $raleway;
+
         
         &:after {
             content: '';
@@ -99,7 +118,6 @@
 		margin-bottom: 1em;
         color: $gold;
         font-family: $raleway;
-        text-shadow: 0 0 4px lighten($black, 15%);
 	}
 
 	.library-link {
@@ -179,4 +197,20 @@
 		text-transform: uppercase;
 		text-decoration: none;
 	}
+    
+    .read-more {
+        display: block;
+		margin-top: 5em;
+        text-decoration: none;
+        font-family: $raleway;
+        color: $gold;
+    }
+    
+    .view-more {
+        display: block;
+		margin-top: 5em;
+        text-decoration: none;
+        font-family: $raleway;
+        color: $gold;
+    }
 }

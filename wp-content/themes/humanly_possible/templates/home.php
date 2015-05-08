@@ -20,14 +20,20 @@ get_header();
                     <p><?php the_field('hero_subheadline'); ?></p>
                 </div><!--end hero-->
             
+            <div class="gold-band"></div>
+            
             <!--begin services-->
             <div class="services">
                 <div class="row">
                     
+                    <h2 class="services-headline underline">Easy Legal Tools for Filmmakers. Finally. </h2>
+
+                    
                     <?php 
                         $args = array(
                             'post_type' => 'service',
-                            'posts_per_page' => 3
+                            'posts_per_page' => 3,
+                            'order' => ASC
                         );
                         $loop = new WP_Query ( $args );
                         while ( $loop->have_posts() ) : $loop->the_post();
@@ -47,9 +53,12 @@ get_header();
             
             <!--end services-->
             
+            <div class="gold-band"></div>
+
+            
             <!--begin library-->
             <div class="library">
-                <h2 class="library-headline">Examples</h2>
+                <h2 class="library-headline underline">Examples</h2>
                 
                     <div class="row">
                         
@@ -63,7 +72,7 @@ get_header();
                         ?>
                     
                         <div class="column third" style="background-image: url(<?php the_field('library_feature_image'); ?>);">
-                            <div class="library-color-overlay"></div>`
+                            <div class="library-color-overlay"></div>
                             
                             <h3 class="library-title"><?php the_title(); ?></h3>
                             <a class="library-link" href="<?php the_permalink(); ?>">➞</a>
@@ -97,7 +106,7 @@ get_header();
                             <h3><?php the_title(); ?></h3>
                             <div class="meta"><?php humanly_possible_posted_on(); ?></div>
                             <p><? the_excerpt(); ?></p>
-                            <a href="<?php the_permalink(); ?>">Read More ➞</a>
+                            <a class="read-more" href="<?php the_permalink(); ?>">Read More ➞</a>
                         </div>
                         
                        <?php endwhile; ?>
@@ -105,7 +114,7 @@ get_header();
                         
                     </div>
                 
-                    <a href=""> View More ➞</a>    
+                    <a class="view-more" href=""> View More ➞</a>    
             </div>
             <!--end blog-->
             

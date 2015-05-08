@@ -233,6 +233,9 @@ th {
   .row:after, .posts-navigation .nav-links:after, .row:before, .posts-navigation .nav-links:before {
     content: '';
     display: table; }
+  .row .row, .posts-navigation .nav-links .row, .row .posts-navigation .nav-links, .posts-navigation .row .nav-links, .posts-navigation .nav-links .nav-links {
+    width: 100%;
+    max-width: 100%; }
 
 .column {
   float: left;
@@ -254,14 +257,22 @@ th {
       width: 100% !important;
       margin-right: 0; } }
 
+.content-column {
+  padding-right: 2%; }
+  .content-column.last_column {
+    padding-right: 0; }
+
 body {
   font-size: 1.6em; }
 
 .screen-reader-text {
   display: none; }
 
+a {
+  font-family: "Raleway", sans-serif; }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto Slab", serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   line-height: 1;
   margin: 0 0 0.25em; }
@@ -283,6 +294,17 @@ h5 {
 
 h6 {
   font-size: 1em; }
+
+h1.underline, h2.underline, h3.underline, h4.underline, h5.underline, h6.underline {
+  position: relative; }
+  h1.underline:after, h2.underline:after, h3.underline:after, h4.underline:after, h5.underline:after, h6.underline:after {
+    content: '';
+    position: absolute;
+    bottom: -0.75em;
+    left: 47.5%;
+    right: 47.5%;
+    height: 0.1em;
+    background: #e2c290; }
 
 a {
   -webkit-transition: all 333ms ease-in-out;
@@ -356,7 +378,7 @@ a {
   float: right; }
 
 .hero {
-  padding: 16em 0;
+  padding: 20em 0;
   text-align: center;
   color: white;
   background-size: cover !important;
@@ -366,15 +388,27 @@ a {
   html.touch .hero {
     background-attachment: scroll !important; }
   .hero h1 {
-    font-family: "Raleway", sans-serif; }
+    font-family: "Raleway", sans-serif;
+    font-size: 4em;
+    text-shadow: 0 0 6px #555555; }
   .hero p {
     font-family: "Raleway", sans-serif;
     font-size: 1.5em;
-    margin-top: 0.5em; }
+    margin-top: 0.5em;
+    text-shadow: 0 0 6px #555555; }
+
+.gold-band {
+  background: #d5a021;
+  height: 1em;
+  width: auto; }
 
 .services {
-  background: #e2c290;
+  background: #e2e2e2;
   padding: 4em 0; }
+  .services .services-headline {
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 2.25em;
+    text-align: center; }
   .services .column {
     text-align: center; }
   .services .service-icon {
@@ -383,7 +417,8 @@ a {
     margin-bottom: 2.25em; }
   .services .service-title {
     position: relative;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    font-family: "Raleway", sans-serif; }
     .services .service-title:after {
       content: '';
       position: absolute; }
@@ -432,8 +467,7 @@ a {
   .library .library-title {
     margin-bottom: 1em;
     color: #d5a021;
-    font-family: "Raleway", sans-serif;
-    text-shadow: 0 0 4px #555555; }
+    font-family: "Raleway", sans-serif; }
   .library .library-link {
     display: inline-block;
     text-decoration: none;
@@ -489,10 +523,48 @@ a {
     text-align: right;
     text-transform: uppercase;
     text-decoration: none; }
+  .recent-blog .read-more {
+    display: block;
+    margin-top: 5em;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: #d5a021; }
+  .recent-blog .view-more {
+    display: block;
+    margin-top: 5em;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: #d5a021; }
 
-body.post-type-archive-library #main .row column, body.post-type-archive-library #main .posts-navigation .nav-links column, .posts-navigation body.post-type-archive-library #main .nav-links column {
-  margin-bottom: 1em; }
-  body.post-type-archive-library #main .row column:nth-child(3n), body.post-type-archive-library #main .posts-navigation .nav-links column:nth-child(3n), .posts-navigation body.post-type-archive-library #main .nav-links column:nth-child(3n) {
+body.post-type-archive-library #main .row .column, body.post-type-archive-library #main .posts-navigation .nav-links .column, .posts-navigation body.post-type-archive-library #main .nav-links .column {
+  margin-bottom: 1.1em; }
+  body.post-type-archive-library #main .row .column:nth-child(3n), body.post-type-archive-library #main .posts-navigation .nav-links .column:nth-child(3n), .posts-navigation body.post-type-archive-library #main .nav-links .column:nth-child(3n) {
     margin-right: 0; }
+
+body.single-library .library-page-title {
+  text-align: center;
+  color: #2f2f2f;
+  padding: 1em 0; }
+  body.single-library .library-page-title:after {
+    bottom: 0; }
+body.single-library .category-list a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #d5a021; }
+body.single-library .library-hero {
+  padding-top: 1em;
+  width: 100%;
+  height: 300px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important; }
+  html.touch body.single-library .library-hero {
+    background-attachment: scroll !important; }
+body.single-library p.intro {
+  color: #d5a021;
+  text-align: center;
+  font-size: 1.5em;
+  font-style: italic; }
 
 /*# sourceMappingURL=style.css.map */

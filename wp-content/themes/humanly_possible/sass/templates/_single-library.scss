@@ -1,0 +1,36 @@
+body.single-library {
+
+    .library-page-title {
+        text-align: center;
+        color: $black;
+        padding: 1em 0;
+        
+        &:after {
+            bottom: 0;
+        }
+    }
+
+    
+    .category-list {
+        
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $gold;
+        }
+    }
+    
+    .library-hero {
+        padding-top: 1em;
+        width: 100%;
+        height: 300px;
+        @include background-image(scroll);
+        
+    }
+    p.intro {
+        color: $gold;
+        text-align: center;
+        font-size: 1.5em;
+        font-style: italic;
+    }
+}

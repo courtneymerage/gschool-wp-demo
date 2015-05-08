@@ -5,6 +5,11 @@ $grid-gutter: 2%;
 	max-width: 1400px;
 	margin: 0 auto;
 	@include clearfix;
+    
+    .row {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .column {
@@ -39,4 +44,12 @@ $grid-gutter: 2%;
 		width: 100% !important;
 		margin-right: 0;
 	}
+}
+
+// Fix for Column Shortcodes plugin
+.content-column {
+    padding-right: 2%;
+    &.last_column {
+        padding-right: 0;
+    }
 }

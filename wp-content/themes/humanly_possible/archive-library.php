@@ -22,7 +22,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="column third" style="background-image: url(<?php the_field('library_feature_image'); ?>);">
-                            <div class="library-color-overlay"></div>`
+                            <div class="library-color-overlay"></div>
                             
                             <h3 class="library-title"><?php the_title(); ?></h3>
                             <a class="library-link" href="<?php the_permalink(); ?>">➞</a>
